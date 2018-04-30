@@ -1,44 +1,41 @@
 <html lang="pt">
-
-<head>
-  <meta charset="utf-8">
-  <title>Jogo da Velha</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/app.js"></script>
-</head>
-
-<body>
-  <div id="container" class="container-fluid">
+  <head>
+    <meta charset="utf-8">
+    <title>Jogo da Velha</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+   <div id="container" class="container-fluid">
     <div id="logo">Jogo da Velha</div>
     <hr />
     <div id="menu">
-      <a id="resetGame" href="#">Reset Game</a>
+      <a id="resetGame" href="#" >Reset Game</a>
     </div>
     <hr />
-    <p id="message" class="alert-heading">Click na celula para iniciar o jogo.
-      <p>
-        <table id="tictactoe-board" class="table-responsive-sm">
-          <tr>
-            <td id="grid-0" class=""></td>
-            <td id="grid-1" class=""></td>
-            <td id="grid-2" class=""></td>
-          </tr>
-          <tr>
-            <td id="grid-3" class=""></td>
-            <td id="grid-4" class=""></td>
-            <td id="grid-5" class=""></td>
-          </tr>
-          <tr>
-            <td id="grid-6" class=""></td>
-            <td id="grid-7" class=""></td>
-            <td id="grid-8" class=""></td>
-          </tr>
-        </table>
-  </div>
-  <div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <p id="message" class="alert-heading">Click na celula para iniciar o jogo.<p>
+    <table id="tictactoe-board" class="table-responsive-sm">
+      <tr>
+        <td id="grid-0" class=""></td>
+        <td id="grid-1" class=""></td>
+        <td id="grid-2" class=""></td>
+      </tr>
+      <tr>
+        <td id="grid-3" class=""></td>
+        <td id="grid-4" class=""></td>
+        <td id="grid-5" class=""></td>
+      </tr>
+      <tr>
+        <td id="grid-6" class=""></td>
+        <td id="grid-7" class=""></td>
+        <td id="grid-8" class=""></td>
+      </tr>
+    </table>
+   </div>
+   <div class="modal"  id="myModal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -58,6 +55,5 @@
   </div>
 
 
-</body>
-
+  </body>
 </html>

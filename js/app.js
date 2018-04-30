@@ -51,31 +51,6 @@ $(document).ready(function () {
 		}
 
 		/**
-		* Esta função compara as celulas preenchidas com o mapemanto de jogadas vitoriosas
-		* caso exista alguma combinação vitoriosa resultado mostrado pro usuario
-		* checkResult = função que checa os resultados
-		* gridCount = Conta as grids que foram selecionadas pelos usuarios 
-		*/
-		this.checkResult = function (selectedGrids) {
-			gridCount = 0;
-			var temp = this;
-			$.each(this.WinPatterns, function (index, value) {
-				$.each(value, function (index, pattern) {
-					if ($.inArray(pattern.toString(), selectedGrids) > -1) {
-						gridCount++;
-					}
-				});
-				if (gridCount === 3) {//if que mostra caso tenha algum vencedor
-					$("#result").text("Jogador " + temp.CurrentPlayer + " venceu o jogo");
-					$('#myModal').modal('toggle')
-					temp.resetGame();
-					gridCount = 0;
-					return true;
-				}
-				gridCount = 0;
-			});
-		}
-		/**
 		* Esta função verifica se temos algum vencedor. a função que verifica se existe ou não
 		*  um vencedor é a checkResult.
 		*/
@@ -107,6 +82,32 @@ $(document).ready(function () {
 				this.resetGame();
 			}
 		}
+		/**
+		* Esta função compara as celulas preenchidas com o mapemanto de jogadas vitoriosas
+		* caso exista alguma combinação vitoriosa resultado mostrado pro usuario
+		* checkResult = função que checa os resultados
+		* gridCount = Conta as grids que foram selecionadas pelos usuarios 
+		*/
+		this.checkResult = function (selectedGrids) {
+			gridCount = 0;
+			var temp = this;
+			$.each(this.WinPatterns, function (index, value) {
+				$.each(value, function (index, pattern) {
+					if ($.inArray(pattern.toString(), selectedGrids) > -1) {
+						gridCount++;
+					}
+				});
+					if (gridCount === 3) {//if que mostra caso tenha algum vencedor
+						$("#result").text("Jogador " + temp.CurrentPlayer + " venceu o jogo");
+						$('#myModal').modal('toggle')
+						temp.resetGame();
+						gridCount = 0;
+						return true;
+					}
+					gridCount = 0;
+				});	
+		}
+
 		/**
 		* Essa função reseta o jogo limpando todas as grids.
 		*/
