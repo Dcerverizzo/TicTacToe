@@ -1,5 +1,8 @@
+/*Fontes utilizadas no jogo*/
 
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower|Indie+Flower|Lobster|Kalam');
 
+/*Responsividade no css */
 @media (min-width: 600px){
 	body {
 		font-size: 12px;
@@ -40,7 +43,6 @@
 	-webkit-font-smoothing:antialiased;
 }
 
-
 #container #logo {
 	font-family: 'Lobster', cursive;
 	color: rgb(61, 178, 220);
@@ -50,9 +52,9 @@
 #container #menu {
 	padding: 12px;
 	line-height: 1.3em;
-	text-transform: uppercase;
 	font-size: 35px;
 	font-weight: bold;
+	font-family: 'Kalam';
 	color: rgb(61, 178, 220);
 }
 
@@ -64,7 +66,7 @@
 }
 
 #container #menu a:hover{
-	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 	color: rgb(255, 65, 65);
 }
 
@@ -77,7 +79,6 @@ table {
 	height: 60%;
 	margin: auto;
 	border-collapse: collapse;
-	
 	background: white;
 	-moz-box-shadow:    0px 1px 40px 5px #ccc;
   	-webkit-box-shadow: 0px 1px 40px 5px #ccc;
@@ -91,5 +92,13 @@ table tr td {
 	text-align: center;
 	font-size: 4.5em;
 	cursor:pointer;
+	font-family: 'Indie Flower', cursive;
+	color: rgb(61, 179, 220);
 }
-/*Configuração da responsividade, ja utilizada pelo framework css */
+#myModal{
+	background-color: rgb(63, 148, 177);
+	font-family: 'Kalam';
+	font-size: 1.9em;
+	color: rgb(7, 1, 1);
+	box-shadow: 0px 1px 40px 5px #ccc;
+}
